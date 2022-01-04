@@ -116,6 +116,11 @@ SectionPage {
 				Item {
 					height: Math.max(detailsButton.height, confirmButton.height)
 
+					Timer {
+						interval: 4000; running: true; repeat: false
+						onTriggered: confirmButton.clicked()
+					}
+
 					anchors {
 						left: parent.left
 						right: parent.right
